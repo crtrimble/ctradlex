@@ -1,0 +1,192 @@
+
+#treeViewDiv{
+float: left;
+width: 25%;
+height: 100%;
+overflow-y: auto;
+}
+
+#rightBar{
+float: right;
+width: 75%;
+height: 100%;
+}
+
+#imgSize {
+	width:75px;
+}
+
+#basics {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#pbContainer {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: 0px;
+	float:top;
+	clear:both;
+}
+.Img_URL {
+	overflow: auto;
+}
+
+#Name {
+	font-size: 1.5em;
+}
+
+#Pearls {
+	width: 100%;
+}
+
+#imgToolsNav {
+	float: right;
+}
+
+.dropMenu {
+	width: 400px;
+}
+
+#paraLink {
+	height: 300px;
+}
+
+#imgLink {
+	width: 400px;
+}
+
+#ImgUrlWrapper {
+height:100%;
+width:70%;
+float: right;
+}
+
+#edit_URL {
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+}
+
+.windowPane {
+	height: 100%;
+	width: 100%;
+}
+
+.parentDiv {
+	width: 100%;
+}
+
+.front {
+	height: 100%;
+}
+
+.back {
+	height: 100%;
+}
+
+
+#editToggle {
+	float: right;
+}
+
+#editUrlPara{
+	float: right;
+}
+
+#Img_URL {
+	border-style: hidden;
+	overflow:auto;
+	width: 100%;
+	height: 100%;
+}
+
+
+.imgToggles {
+	display: inline-block;	
+}
+
+
+
+.toggle {
+	width: 75px;
+}
+
+.mainWindow {
+	position: relative;
+	top: 300px;
+}
+
+
+
+.typeahead, .tt-query, .tt-hint {
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    font-size: 12px;
+    height: 30px;
+    line-height: 30px;
+    outline: medium none;
+    padding: 8px 12px;
+    width:100%;
+}
+.typeahead {
+    background-color: #FFFFFF;
+    width: 100%;
+}
+.typeahead:focus {
+    border: 2px solid #0097CF;
+}
+.tt-query {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.tt-hint {
+    color: #999999;
+}
+.tt-dropdown-menu {
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 12px;
+    padding: 8px 0;
+    width: 422px;
+}
+.tt-suggestion {
+    font-size: 18px;
+    line-height: 24px;
+    padding: 3px 20px;
+}
+.tt-suggestion.tt-cursor {
+    background-color: #0097CF;
+    color: #FFFFFF;
+}
+.tt-suggestion p {
+    margin: 0;
+}
+
+#header {
+
+}
+
+#diagLeft {
+float: left;
+width:30%;
+height:100%;
+}
+
+.mainDiv {
+	overflow: auto;
+}
+
+#diagRight {
+float:right;
+width:70%;
+height:100%;
+}
+
+#wrapper {
+	padding-left:312px;
+	position:relative;
+}
+

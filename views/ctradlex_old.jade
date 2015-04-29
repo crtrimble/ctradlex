@@ -1,0 +1,74 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/toggles-full.css')
+        link(rel='stylesheet', href='/stylesheets/styleJSTree.css')
+        link(rel='stylesheet', href='/dist/css/bootstrap.min.css')
+    - var idtoins = 0
+    body
+        navbar.navbar-fixed-top.navbar-inverse(role='navigation')
+          .container
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              #basics.navbar-brand
+                input(class="typeahead", type="text", placeholder="Diagnosis")
+            .collapse.navbar-collapse
+              p.navbar-text#Name.edit_area.currDiag
+              div(class="toggle toggle-light imgToggles" ID="autoResize").navbar-text
+              div(class="toggle toggle-light imgToggles" ID="editToggle").navbar-text
+            // /.nav-collapse
+          // /.container
+        // /.navbar
+        block content
+            div(class="maindiv", ID="mainWindow")
+                div#leftBar.maindiv.mainBar
+                    //typeahead start
+                    div#basics
+                        input(class="typeahead", type="text", placeholder="Diagnosis")
+                    div#treeHolder
+                        div#treeViewDiv
+                div#rightBar.maindiv.mainBar
+                    p#Name.edit_area.currDiag
+                    div#diagLeft
+                        div#_id
+                            {radlex[117]._id}
+                        div#addParent
+                            input(class="typeahead", type="text", placeholder="Add Parent")
+                        div#parentTree.currDiag
+                        textarea#Pearls.currDiag
+                        button#btn1.
+                            Test it
+                                          
+                    div#diagRight.maindiv
+                        div#imgToggles
+                            p.imgToggles#resizeTag.
+                                auto-resize images
+                            div(class="toggle toggle-light imgToggles" ID="autoResize")
+                            p.imgToggles#editUrlPara.
+                                edit HTML
+                            div(class="toggle toggle-light imgToggles" ID="editToggle")
+                        div#ImgUrlWrapper.maindiv
+                            div.front    
+                                iFrame#Img_URL.currDiag.Img_URL(src = 'about:blank')
+                            div.back
+                                textarea(name="Image URL", class="Img_URL", id="edit_URL")
+
+        script(src='/javascripts/jquery.min.js')
+        script(src='/javascripts/radlex.js')
+        script(src='/javascripts/jstree.min.js')
+        script(src='/javascripts/typeahead.bundle.js')
+        script(src='/javascripts/jquery.jeditable.js')
+        script(src='/dist/js/bootstrap.min.js')
+        script(src='/javascripts/jquery.flip.js')
+        script(src='/javascripts/jquery-ui.min.js')
+        script(src='/javascripts/toggles.js')
+

@@ -1,0 +1,91 @@
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title= title
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        link(rel='stylesheet', href='/stylesheets/toggles-full.css')
+        link(rel='stylesheet', href='/stylesheets/styleJSTree.css')
+        link(rel='stylesheet', href='/dist/css/bootstrap.min.css')
+    - var idtoins = 0
+    body
+        navbar.navbar-fixed-top.navbar-inverse(role='navigation')
+          .container-fluid
+            .navbar-header
+              button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+                span.sr-only Toggle navigation
+                span.icon-bar
+                span.icon-bar
+                span.icon-bar
+              #basics
+                input(class="typeahead", type="text", placeholder="Diagnosis")
+                    
+            .collapse.navbar-collapse
+              ul.nav.navbar-nav
+                li.dropdown
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><span ID="Name">Test Diagnosis</span> <span class="caret"></span></a>                       
+                    ul.dropdown-menu
+                        li <span> Diagnosis ID: </span> <span ID="_id" class="navbar-text"></span>
+              ul.nav.navbar-nav#imgToolsNav
+                a.navbar-text#insertBreak2.dropdown.inputDrop(type="button" aria-label="insert break")
+                    span#insertBreak.glyphicon.glyphicon-arrow-down(data-toggle="dropdown")
+
+                a.navbar-text#insertPara.dropdown.inputDrop(type="button" aria-label="insertparagraph")
+                    span.glyphicon.glyphicon-align-justify(data-toggle="dropdown")
+                    ul.dropdown-menu.inputDrop#imgMenu
+                        li
+                            textarea#paraLink.dropMenu(type="textarea", name="", value="", required="required", pattern="", title="", placeholder = "Body text").form-control
+                        li
+                            button#addTextToHTML(type="button").btn.btn-default.dropMenu Submit
+
+                a.navbar-text#insertImg.dropdown.inputDrop(type="button" aria-label="insert image from clipboard")
+                    span.glyphicon.glyphicon-picture(data-toggle="dropdown")
+                    ul.dropdown-menu.inputDrop#imgMenu
+                        li
+                            input#imgLink.dropMenu(type="text", name="", value="", required="required", pattern="", title="", placeholder = "Paste link").form-control
+                li.navbar-text
+                li.navbar-text
+                    |image resize
+                li
+                    input#imgSize.navbar-text(type="range", min="0" max="100")
+                li.navbar-text
+                li.navbar-text
+                    |edit html
+                li.toggle.toggle-light.imgToggles#editToggle.navbar-text
+
+              //p.navbar-brand#Name.edit_area.currDiag
+              //div(class="toggle toggle-light imgToggles" ID="autoResize").navbar-text
+              //div(class="toggle toggle-light imgToggles" ID="editToggle").navbar-text
+            // /.nav-collapse
+          // /.container
+        // /.navbar
+        block content
+            .container-fluid.progressbar#pbContainer
+            .container-fluid.mainWindow
+                div#treeViewDiv.well.windowPane
+                div#rightBar.windowPane
+                    div#diagLeft
+                        div#parentDiv.well
+                            div#addParent
+                                input(class="typeahead", type="text", placeholder="Diagnosis")
+                            div#parentTree.parentDiv
+                        textarea#Pearls.form-control.well
+                    div#ImgUrlWrapper.windowPane
+                        div.front.windowPane.imgPane
+                            iFrame#Img_URL.windowPane.Img_URL.well(src = 'about:blank')
+                        div.back.windowPane.imgPane
+                            textarea.windowPane#edit_URL.well.Img_URL(name="Image URL")
+
+        script(src='/javascripts/jquery.min.js')
+        script(src='/javascripts/radlex.js')
+        script(src='/javascripts/jstree.min.js')
+        script(src='/javascripts/typeahead.bundle.js')
+        script(src='/javascripts/jquery.jeditable.js')
+        script(src='/dist/js/bootstrap.js')
+        script(src='/javascripts/jquery.flip.js')
+        script(src='/javascripts/jquery-ui.min.js')
+        script(src='/javascripts/toggles.js')
+        script(src='/javascripts/progressbar.js')
+
